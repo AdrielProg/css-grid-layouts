@@ -1,6 +1,50 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;800&family=VT323&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;800&family=VT323&display=swap");
 
 body {
   margin: 30px;
   font-family: "Poppins";
+}
+
+.pyramid-container-grid {
+  background-color: blueviolet;
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(6, 100px);
+  gap: 2px;
+  justify-items: stretch;
+}
+.pyramid-container-grid > .pyramid-element {
+  background-color: greenyellow;
+  text-align: center;
+  border: solid 1px black;
+  align-content: center;
+}
+
+.pyramid-container-grid > .pyramid-element:nth-child(1) {
+  grid-column: 6 / span 2;
+}
+
+.pyramid-container-grid > .pyramid-element:nth-child(2) {
+  grid-row: 2;
+  grid-column: 5/9;
+}
+
+.pyramid-container-grid > .pyramid-element:nth-child(3) {
+  grid-row: 3;
+  grid-column: 4/10;
+}
+
+.pyramid-container-grid > .pyramid-element:nth-child(4) {
+  grid-row: 4;
+  grid-column: 3/11;
+}
+.pyramid-container-grid > .pyramid-element:nth-child(5) {
+  grid-row: 5;
+  grid-column: 2/12;
+}
+.pyramid-container-grid > .pyramid-element:nth-child(6) {
+  grid-row: 6;
+  grid-column: 1 / span 12;
 }
